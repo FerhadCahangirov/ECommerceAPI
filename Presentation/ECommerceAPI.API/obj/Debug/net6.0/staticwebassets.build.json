@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "AB24sD0zV19dz1dww30krF/aqsU3igfFnKQiqXmopmc=",
+  "Source": "ECommerceAPI.API",
+  "BasePath": "_content/ECommerceAPI.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ECommerceAPI.API\\wwwroot",
+      "Source": "ECommerceAPI.API",
+      "ContentRoot": "C:\\Users\\ASUS\\Documents\\ECommerceAppAspAngular\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\wwwroot\\",
+      "BasePath": "_content/ECommerceAPI.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ASUS\\Documents\\ECommerceAppAspAngular\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\wwwroot\\resource\\files\\road.jpg",
+      "SourceId": "ECommerceAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Documents\\ECommerceAppAspAngular\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\wwwroot\\",
+      "BasePath": "_content/ECommerceAPI.API",
+      "RelativePath": "resource/files/road.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\files\\road.jpg"
+    }
+  ]
+}
