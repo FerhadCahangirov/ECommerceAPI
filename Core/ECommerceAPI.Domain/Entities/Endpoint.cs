@@ -13,7 +13,7 @@ namespace ECommerceAPI.Domain.Entities
 
         public Endpoint()
         {
-            Roles = new HashSet<AppRole>();
+            Roles = new HashSet<AppRole>();                                                                                                                      
         }
 
         public string ActionType { get; set; }
