@@ -15,6 +15,7 @@ using ECommerceAPI.Application.Helpers;
 using Microsoft.EntityFrameworkCore;
 using ECommerceAPI.Application.Repositories;
 using ECommerceAPI.Domain.Entities;
+using ECommerceAPI.Domain.Entities.Identity;
 
 namespace ECommerceAPI.Persistence.Services
 {
@@ -79,7 +80,7 @@ namespace ECommerceAPI.Persistence.Services
 
         public async Task<List<ListUser>> GetAllUsersAsync(int page, int size)
         {
-            var users = await _userManager.Users.Skip(page * size).Take(size).ToListAsync();
+            List<AppUser>? users = await _userManager.Users.Skip(page * size).Take(size).ToListAsync();
 
             return users.Select(user => new ListUser { 
                 Id = user.Id,
@@ -105,14 +106,11 @@ namespace ECommerceAPI.Persistence.Services
         {
             AppUserClass user = await _userManager.FindByIdAsync(userIdOrName);
 
-            if (user == null)
-            {
-                user = await _userManager.FindByNameAsync(userIdOrName);   
-            }
+            user ??= await _userManager.FindByNameAsync(userIdOrName);
 
             if (user != null)
             {
-                var userRoles = await _userManager.GetRolesAsync(user);
+                IList<string> userRoles = await _userManager.GetRolesAsync(user);
                 return userRoles.ToArray();
             }
             return Array.Empty<string>();

@@ -75,7 +75,7 @@ namespace ECommerceAPI.Persistence.Services
             foreach (var role in endpoint.Roles)
                 endpoint.Roles.Remove(role);
 
-            var appRoles = await _roleManager.Roles.Where(r => roles.Contains(r.Name)).ToListAsync();
+            List<AppRole> appRoles = await _roleManager.Roles.Where(r => roles.Contains(r.Name)).ToListAsync();
 
             foreach (var role in appRoles)
                 endpoint.Roles.Add(role);
